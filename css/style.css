@@ -41,7 +41,6 @@ body {
 
 .listItems a {
   display: inline-block;
-  cursor: pointer;
   font-weight: bold;
   list-style-type: none;
   text-decoration: none;
@@ -107,6 +106,8 @@ body {
   width: 50%;
   height: 200px;
   position: fixed;
+  z-index: 1;
+  cursor: pointer;
 }
 
 .titleBox .textContainer h1 {
@@ -117,6 +118,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  z-index: auto;
 }
 
 .titleBox .textContainer p {
@@ -124,6 +126,13 @@ body {
   position: absolute;
   width: 80%;
   color: #fcf9f9;
+}
+
+.titleBox .textContainer:hover {
+  position: relative;
+  font-size: 18px;
+  -webkit-transition: font-size 1s ease-in-out;
+  transition: font-size 1s ease-in-out;
 }
 
 footer {

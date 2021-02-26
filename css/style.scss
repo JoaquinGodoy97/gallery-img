@@ -42,7 +42,6 @@ body{
 }
 .listItems a{
     display: inline-block;
-    cursor: pointer;
     font-weight: bold;
     list-style-type: none;
     text-decoration: none;
@@ -92,6 +91,9 @@ body{
         width: 50%;
         height: 200px;
         position: fixed;
+        z-index: 1;
+        cursor: pointer;
+       
         h1{
         font-family: 'Raleway', sans-serif;
         position: relative;
@@ -99,6 +101,7 @@ body{
         // color: black;
         text-shadow: 3px 2px 40px black;
         align-items: center;
+        z-index: auto;
     }
         p {
         font-family: 'Raleway', sans-serif;
@@ -107,7 +110,11 @@ body{
         color: $whiteText;
         }
     }
-    
+    .textContainer:hover{
+        position: relative;
+        font-size: 18px;
+        transition: font-size 1s ease-in-out;
+    }
 }
 
 footer{
